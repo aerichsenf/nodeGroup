@@ -1,0 +1,67 @@
+<h1>Add and manage your events here</h1>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="notes">Notes</label>
+            <input type="text" id="notes" name="notes">
+        </div>
+        <div class="input">
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" name="start_date">
+        </div>
+        <div class="input">
+            <label for="end_date">End Date</label>
+            <input type="date" id="end_date" name="end_date">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Get Data</h3>
+    <a href="/get-data">LOAD DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>ID: {{ this._id }}</div>
+                <div>Notes: {{ this.notes }}</div>
+                <div>Date: {{ this.start_date }}</div>
+                <div>Notes: {{ this.end_date }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+<section class="update">
+    <h3>Update Data</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="notes">Notes</label>
+            <input type="text" id="notes" name="notes">
+        </div>
+        <div class="input">
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" name="start_date">
+        </div>
+        <div class="input">
+            <label for="end_date">End Date</label>
+            <input type="date" id="end_date" name="end_date">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>
+</section>
+
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>
