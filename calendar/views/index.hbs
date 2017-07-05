@@ -18,7 +18,7 @@
         scheduler.init('scheduler_here',new Date(),"month");
 
         scheduler.templates.xml_date = function(data){ return new Date(data); };
-        scheduler.load("/get-data", "json");
+        scheduler.load("/data", "json");
 
 
         scheduler.config.xml_date="%Y-%m-%d %H:%i";

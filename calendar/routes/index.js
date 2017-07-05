@@ -60,8 +60,6 @@ router.post('/update', function(req, res, next) {
     res.redirect('/index2');
 });
 
-
-/* ESSA PARTE PRECISA SER MANDADA COMO JSON PRO HTML */
 router.get('/data', function(req, res){
     EventData.find({}, function(err, data){
         if (err) {
@@ -72,9 +70,6 @@ router.get('/data', function(req, res){
         res.send(data);
     });
 });
- //.then(function(doc) {
-//res.render('index2', {items: doc});
-//});
 
 router.post('/delete', function(req, res, next) {
     var id = req.body.id;
@@ -82,6 +77,4 @@ router.post('/delete', function(req, res, next) {
     res.redirect('/index2');
 });
 
-
-/*Test with Calendar dates */
 module.exports = router;
